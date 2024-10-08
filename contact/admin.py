@@ -18,3 +18,11 @@ class ContactAdmin(admin.ModelAdmin):
 
     # Fica como link para acessar
     list_display_links = 'id', 'phone',
+
+@admin.register(models.Category)
+class ContactAdmin(admin.ModelAdmin):
+    # Mostrando os campos no admin do django
+    list_display = 'name',
+    # Para ficar na decrescente 
+    ordering = '-id', 
+ 
